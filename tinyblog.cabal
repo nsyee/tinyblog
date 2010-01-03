@@ -1,0 +1,40 @@
+Name: tinyblog
+Version: 2010.1.4.1
+Synopsis: a simple blog tool
+Description:
+ a simple blog tool.
+Author: Nishiyama Yuya <nsy@ulz.nu>
+Maintainer: Nishiyama Yuya <nsy@ulz.nu>
+Build-Depends: base
+Cabal-Version: >= 1.2
+License: BSD3
+Category: Web
+homepage: http://madvib.es
+
+Build-Type: Simple
+
+library
+    ghc-options: -Wall -hide-package monads-fd
+    build-depends: base
+                 , bytestring
+                 , convertible-text
+                 , data-object-json
+                 , directory
+                 , hack
+                 , hack-contrib
+                 , hack-handler-simpleserver
+                 , loli
+                 , mtl
+                 , network
+                 , old-time
+                 , regex-compat
+                 , regex-posix
+                 , rss
+                 , unix
+                 , utf8-string
+                 , xhtml
+    hs-source-dirs: src/
+    exposed-modules: TinyBlog
+    other-modules:
+        TinyBlog.Config
+        TinyBlog.Entry

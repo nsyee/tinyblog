@@ -1,0 +1,196 @@
+body {
+    background-repeat: no-repeat;
+    background-position: bottom right;
+    background-color: #fff;
+    font-family: 'Helvetica, Ariel', sans-serif;
+}
+
+a {
+    color: #FCB310;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration:underline;
+}
+
+.hidden {
+    display: none;
+}
+
+h1 {
+   color: #333333;
+   padding: 0;
+   text-size: 100px;
+   margin-top: -15px; 
+   margin-bottom: -15px; 
+}
+
+h1 a {
+    color: #333333;
+    text-decoration: none;
+}
+
+.header {
+    font-family: helvetica sans-serif;
+    margin: 25px 0 50px 0; 
+    width: 100%; 
+}
+
+.header h1 {
+    line-height:56px;
+    font-size:100px;
+    font-weight:100;
+    letter-spacing:-2px;
+    text-transform:uppercase;
+    text-align: center;
+}
+.header h1 a {
+    font-weight:normal;
+    border:0 !important;
+    text-decoration: none;
+}
+
+.header h2 {
+    color:#BBBBBB;
+    font-size:16px;
+    font-weight:100;
+    letter-spacing:-1px;
+    line-height:22px;
+    text-align:center;
+    margin-right:55px;
+}
+
+div#content {
+    width: 550px;
+    margin: auto;
+    position: relative;
+    margin-top: 30px;
+}
+
+div.post {
+    position: relative;
+    margin-bottom: 50px;
+    padding-right: 40px;
+    text-decoration: none;
+}
+
+div.post span.datetime {
+     font-size: 12px;
+     line-height: 150%;
+     color: #555;
+     padding: 25px 25px 45px 0;
+     text-align: left;
+}
+
+div.post img.permalink {
+    width: 38px;
+    height: 32px;
+    border: none;
+    background-color: #fff;
+    position: absolute;
+    right: 560px;
+    top: 0px;
+    z-index: 10;
+    text-decoration: none;
+    opacity: 0.4;
+}
+
+div.post:hover img.permalink {
+    display: inline;
+    text-decoration: none;
+    background-color: #fff;
+    opacity: 0.99;
+}
+
+div.post h2 {
+    font-size: 26px;
+    color: #B0C4DE;
+    letter-spacing: -1px;
+    margin: 0px 0px 5px 0px;
+    text-decoration: none;
+}
+
+div.post h2 a {
+    color: #B0C4DE;
+    text-decoration: none;
+    font-family: Helvetica Neue, sans-serif;
+    font-weight: 100;
+}
+
+div.post div.caption {
+    font-size: 16px;
+    font-weight: bold;
+    color: #444;
+    margin-top: 10px;
+    padding: 0px 20px 0px 20px;
+    text-decoration: none;
+    border:none;
+}
+
+div.post div.caption a {
+    color: #FCB310;
+    text-decoration: none;
+    border:none;
+}
+
+div.post div.caption a:hover {
+    color: #FCB310;
+    text-decoration: underline;
+    border:none;
+}
+
+div#content div#menu {
+    position: absolute;
+    right: -170px;
+    width: 200px;
+    text-align: left;
+}
+
+div#menu {
+    width: 275px;
+    margin-left:10px;
+    margin-top:20px;
+    font: Normal 20px Helvetica,sans-serif;
+    line-height: 20px;
+    color: #BBBBBB;
+}
+
+div#menu a {
+    color: #BBBBBB;
+    border:none;
+}
+
+div#recent-entry li {
+    list-style-type: none;
+    margin-bottom: 5px;
+    font-size: 16px;
+}
+
+div#nav {
+    margin: 0px 0px 30px 100px;
+    width: 300px;
+    text-align: center;
+    font-weight: 100;
+    color: #BBBBBB;
+}
+
+div#nav .prev {
+    float: left;
+    font-size: 18px;
+}
+div#nav .next {
+    font-size: 18px;
+}
+
+
+div#nav a {
+    text-decoration: none;
+    font-size: 20px;
+    color: #BBBBBB;
+}
+
+div#nav a:hover {
+    text-decoration: underline;
+    color: #333333;
+}
