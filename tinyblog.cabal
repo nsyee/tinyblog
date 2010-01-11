@@ -1,5 +1,5 @@
 Name: tinyblog
-Version: 2010.1.4.1
+Version: 2010.1.11.1
 Synopsis: a simple blog tool
 Description:
  a simple blog tool.
@@ -9,7 +9,7 @@ Build-Depends: base
 Cabal-Version: >= 1.2
 License: BSD3
 Category: Web
-homepage: http://madvib.es
+homepage: http://madvib.es/
 
 Build-Type: Simple
 
@@ -20,6 +20,7 @@ library
                  , convertible-text
                  , data-object-json
                  , directory
+                 , gravatar
                  , hack
                  , hack-contrib
                  , hack-handler-simpleserver

@@ -9,4 +9,5 @@ data Config = Config
     , cCopyright   :: String  -- ^ copyright
     , cEmail       :: String  -- ^ email
     , cDescription :: String  -- ^ description of this blog
+    , cUseGravatar :: Bool    -- ^ use gravatar image or not (http://gravatar.com)
     } deriving (Eq, Show)

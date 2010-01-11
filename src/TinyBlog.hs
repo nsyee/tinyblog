@@ -6,6 +6,7 @@ module TinyBlog(
 import TinyBlog.Config
 import TinyBlog.Entry
 import Data.Maybe
+import Network.Gravatar
 import Network.Loli
 import Network.Loli.Template.TextTemplate
 import Network.Loli.Utils
@@ -54,8 +55,10 @@ app cfg = loli $ do
 
         case maybeEntry of
             Just entry -> do
-                context ((entryToKV entry) ++ [
-                    ("metaTitle", eTitle entry ++ " - " ++ (cBlogName cfg))
+                let gravatarImage = getGravatarImage (cUseGravatar cfg) (cEmail cfg)
+                context ((entryToKV entry) ++
+                    [ ("metaTitle", eTitle entry ++ " - " ++ (cBlogName cfg))
+                    , ("gravatar", gravatarImage)
                     ]) $ do
                     output  $ text_template "entry.html"
             Nothing -> do
@@ -67,15 +70,23 @@ app cfg = loli $ do
         files <- io $ getEntryFiles
         entries <- io $ readEntries files
         let entry = head entries
+        let gravatarImage = getGravatarImage (cUseGravatar cfg) (cEmail cfg)
 
         update $ set_content_type "text/html"
-        context ((entryToKV entry) ++ [
-            ("metaTitle", cBlogName cfg)
+        context ((entryToKV entry) ++
+            [ ("metaTitle", cBlogName cfg)
+            , ("gravatar", gravatarImage)
             ]) $ do
-            output  $ text_template "entry.html"
-
+            output  $ text_template "index.html"
 
     public (Just ".") ["/static"]
+
+
+
+-- | get a gravatar image
+getGravatarImage :: Bool -> String -> String
+getGravatarImage True email = gravatar email
+getGravatarImage False _    = ""
 
 
 -- | get count from querystring
