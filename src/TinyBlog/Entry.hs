@@ -94,7 +94,12 @@ listKV entries = map mkEntry entries
 -- | sort entries by name
 sortByName :: [(FileStatus, FilePath)]
            -> [(FileStatus, FilePath)]
-sortByName = reverse
+sortByName [] = []
+sortByName (x@(_, xpath):xs) = greater ++ x:lesser
+    where lesser =
+            sortByName [y | y@(_, ypath) <- xs, ypath <  xpath]
+          greater =
+            sortByName [y | y@(_, ypath) <- xs, ypath >= xpath]
 
 -- | sort entries by mtime
 {--
