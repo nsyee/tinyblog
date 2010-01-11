@@ -1,0 +1,11 @@
+*.swp
+*.swo
+*.o
+*.hi
+*.pid
+*.fcgi
+*.exe
+*.log
+/db
+/dist
+Main
