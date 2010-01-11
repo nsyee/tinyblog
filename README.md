@@ -4,7 +4,7 @@ A simple blog tool written with Haskell.
 
 ## Install and compile:
 
-    %git git://github.com/nsyee/tinyblog.git
+    %git clone git://github.com/nsyee/tinyblog.git
     %cd tinyblog
     %runghc Setup.hs configure
     %runghc Setup.hs build
